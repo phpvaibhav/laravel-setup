@@ -17,48 +17,7 @@
       </div>
     </div>
   </div>
-<!-- customer add -->
-<div class="modal fade" id="ajax-crud-modal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title" id="userCrudModal"></h4>
-        </div>
-         <form id="userForm" name="userForm" action="{{url('ajax-crud/store')}}"  method="post" class="form-horizontal">
-        <div class="modal-body">
-          {{ csrf_field() }}
-              @method('PUT')
-               <input type="hidden" name="user_id" id="user_id">
-                <div class="form-group">
-                    <label for="name" class="col-sm-2 control-label">Name</label>
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="" maxlength="50">
-                    </div>
-                </div>
- 
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Email</label>
-                    <div class="col-sm-12">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" value="" >
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Address</label>
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" id="address" name="address" placeholder="Enter address" value="" >
-                    </div>
-                </div>
-           
-        </div>
-        <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" id="btn-save" value="create">Save changes
-            </button>
-        </div>
-         </form>
-    </div>
-  </div>
-</div>
-<!-- customer add -->
+
   <!-- Bootstrap core JavaScript-->
   <script src="{!! asset('backend_assets/vendor/jquery/jquery.min.js') !!}"></script>
   <script src="{!! asset('backend_assets/vendor/bootstrap/js/bootstrap.bundle.min.js') !!}"></script>
@@ -74,7 +33,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
 
-   <script src="{!! asset('backend_assets/toastr/toastr.min.js') !!}"></script>
+    <script src="{!! asset('backend_assets/toastr/toastr.min.js') !!}"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
   <!-- jquery-validate JavaScript-->
   </script>

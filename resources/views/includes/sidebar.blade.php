@@ -32,8 +32,8 @@
           <i class="fas fa-fw fa-cog"></i>
           <span>Products</span></a>
       </li>
-      <li class="nav-item {{ (request()->is('ajax-crud')) ? 'active' : '' }}">
-        <a class="nav-link" href="{{url('ajax-crud')}}">
+      <li class="nav-item {{ (request()->is('customers')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{url('customers')}}">
           <i class="fas fa-fw fa-users"></i>
           <span>Customers</span></a>
       </li> 

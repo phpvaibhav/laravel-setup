@@ -177,7 +177,7 @@ return [
         //image
         Intervention\Image\ImageServiceProvider::class,
         //Datatable
-        Yajra\DataTables\DataTablesServiceProvider::class,
+         Yajra\Datatables\DatatablesServiceProvider::class,
 
     ],
 
@@ -231,7 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Image' => Intervention\Image\Facades\Image::class,
-        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
     ],
 

@@ -17,6 +17,7 @@ class CreateCustomersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name')->nullable();
             $table->string('email')->nullable();
+            $table->string('image')->nullable();
             $table->mediumText('address');
              $table->tinyInteger('status')->default('1')->comment('1:Active ,0:inactive');
             $table->timestamps();
