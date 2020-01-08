@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "546a427a-bb58-4fbd-9f45-1c985e9290c8",
+		"name": "laravel-setup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Regisration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test2@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzEyM2MyMDI1MWIzYjU3YTcwZjNjNjI1ODM2NWZjMTkyMjY1YzRmNWZiYzRlNDkwOGI5YjBkMjAwMGFmZjRlM2VlMmY1N2I5ZWVlMjJkMDEiLCJpYXQiOjE1Nzg0NzIwOTQsIm5iZiI6MTU3ODQ3MjA5NCwiZXhwIjoxNjEwMDk0NDk0LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.BhCRRCsMs3djmtZ-YamJNIy-tqHplkqBxBF1WwdFubUaufcpIFxeF8klvWrZOKaTjq2icNDii8ISe8_dIJht3NRZPkTVAokXMNT6QUs1IuzmjnQiShLSLm-ad1Bi35YRvgbiVOU909W4DH2vHG2R08NlthKWu9Fz8rhGtuhaoz0LxlLpe_kFz7go_WEMPdPhhDEh-8nxVY9GY_E0BkHYn1EpbBp2djuzJD9VguODfz6OJRj04NVq1PXYKf9sAZ28tJo1dJsZzFhUzDhrdralPl6S17nlRSFgR27S4CUVlOAQ-Oj-1BYvAFkuS8HUoOrGk3gEhbNgspfyH9x1ZaROxIIqXO3MyQDCrUTdYlqV4nT22m_UchJH3TmT717oMy6HALuM6ev0AaQ_C9yknfpr2aYoLGZ8UxUFa0XoT0Uuy26_YlV6iowCOEwkm-djqlmbz_UzjGcf27fLmH3eOU0ALPiGypKEnsIL_e9MDIzMchMRtpSJ18KpRw7DQmL2KF-Ukb3Ur_yWsY8DqJA1kLnfxMiFjJ4zipBrkagiuLqcrTKsv7eOvFP3L9iOM-5BUpuXJNsXXG_0H8tgGWKTgIQqAB-EhOyLyTzCPhkrwX4s2sRasdRdisxKrs1bXoiX7dFJHYAFocWERAAIfqspxkwHbKzSUHkg-EiaYJ0SDScYlYs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testing Auth",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzEyM2MyMDI1MWIzYjU3YTcwZjNjNjI1ODM2NWZjMTkyMjY1YzRmNWZiYzRlNDkwOGI5YjBkMjAwMGFmZjRlM2VlMmY1N2I5ZWVlMjJkMDEiLCJpYXQiOjE1Nzg0NzIwOTQsIm5iZiI6MTU3ODQ3MjA5NCwiZXhwIjoxNjEwMDk0NDk0LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.BhCRRCsMs3djmtZ-YamJNIy-tqHplkqBxBF1WwdFubUaufcpIFxeF8klvWrZOKaTjq2icNDii8ISe8_dIJht3NRZPkTVAokXMNT6QUs1IuzmjnQiShLSLm-ad1Bi35YRvgbiVOU909W4DH2vHG2R08NlthKWu9Fz8rhGtuhaoz0LxlLpe_kFz7go_WEMPdPhhDEh-8nxVY9GY_E0BkHYn1EpbBp2djuzJD9VguODfz6OJRj04NVq1PXYKf9sAZ28tJo1dJsZzFhUzDhrdralPl6S17nlRSFgR27S4CUVlOAQ-Oj-1BYvAFkuS8HUoOrGk3gEhbNgspfyH9x1ZaROxIIqXO3MyQDCrUTdYlqV4nT22m_UchJH3TmT717oMy6HALuM6ev0AaQ_C9yknfpr2aYoLGZ8UxUFa0XoT0Uuy26_YlV6iowCOEwkm-djqlmbz_UzjGcf27fLmH3eOU0ALPiGypKEnsIL_e9MDIzMchMRtpSJ18KpRw7DQmL2KF-Ukb3Ur_yWsY8DqJA1kLnfxMiFjJ4zipBrkagiuLqcrTKsv7eOvFP3L9iOM-5BUpuXJNsXXG_0H8tgGWKTgIQqAB-EhOyLyTzCPhkrwX4s2sRasdRdisxKrs1bXoiX7dFJHYAFocWERAAIfqspxkwHbKzSUHkg-EiaYJ0SDScYlYs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

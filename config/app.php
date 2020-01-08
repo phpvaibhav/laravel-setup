@@ -178,6 +178,8 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         //Datatable
          Yajra\Datatables\DatatablesServiceProvider::class,
+         //possport
+         Laravel\Passport\PassportServiceProvider::class,
 
     ],
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Validator,Redirect,Response;
 Use App\User;
 use Illuminate\Support\Facades\Auth;
@@ -29,9 +30,10 @@ class AuthController extends Controller
       public function create(array $data)
     {
       return User::create([
-        'name' => $data['fullName'],
-        'email' => $data['email'],
-        'password' => Hash::make($data['password'])
+        'name'          => $data['fullName'],
+        'email'         => $data['email'],
+        'password'      => Hash::make($data['password']),
+        'api_token'     => Str::random(60),
       ]);
     }//End FUnction
     public function postLogin(Request $request)
@@ -53,4 +55,5 @@ class AuthController extends Controller
         Auth::logout();
         return Redirect('/')->withSuccess('Login successfuly done.');;
     }
+   
 }
