@@ -46,11 +46,17 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        if($request->json() || $request->expectsJson() || $request->header('Authorization')){
-        $response = ['status' => 'fail','message' => 'Incorrect headers supplied'];
-        return response()->json($response); 
+      if ($exception instanceof ModelNotFoundException) {
+            return response()->json([
+            'error' => 'Entry for '.str_replace('App\\', '', $exception->getModel()).' not found'], 404);
+        }else if($request->json() || $request->expectsJson() || $request->header('Authorization')){
+            $response = ['status' => 'fail','message' => 'Something going wrong.'];
+            return response()->json($response); 
+        }else if($request->header('Authorization')){
+             $response = ['status' => 'fail','message' => 'Incorrect headers supplied'];
+            return response()->json($response); 
         }
-      
+        
         return parent::render($request, $exception);
     }
 }
